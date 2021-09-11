@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CSS Overlaying One DIV over Another DIV</title>
+<style> 
+    .container {
+  width: 400px;
+  margin: 0 auto;
+}
+.box {
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  float: left;
+}
+
+.box-1 {
+  background: #ff4500;
+  
+}
+
+.box-2:before {
+  display: inline-block;
+  margin: 0;
+  margin-left: -101px;
+  margin-top: -1px;
+  position: absolute;
+  content: '';
+  width: 0;
+	height: 0;
+	border-bottom: 151px solid #0ffab9;
+	border-left: 30px solid transparent;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1">
+        </div>
+        <div class="box box-2">
+          TITLE 1
+        </div>
+    </div>
+</body>
+</html>
